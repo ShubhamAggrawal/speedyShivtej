@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>dashboard Swiper</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body class="p-8">
+  <div class="max-w-7xl mx-auto grid grid-cols-2 gap-4">
+    <div class="p-2.5 border border-[#AAAAAA]/50 rounded-lg">
+      <div class="flex items-center justify-between">
+        <div class="font-medium text-xl leading-none tracking-normal text-[#4B4743]">
+          Total Categories (10)
+        </div>
+        <div class="">
+          <a class="gap-2.5 rounded-3xl px-4 py-1.5 text-sm lg:text-base flex items-center bg-[#009245] text-white w-fit"
+            href="javascript:;">
+            Open positions
+            <span class="inline-block size-3.5">
+              <img class="size-full" src="./assest/img/add.svg" alt="arrowBlack">
+            </span>
+          </a>
+        </div>
+      </div>
+      <div class="mt-4">
+        <div class="">
+          <div class="space-y-2">
+            <!-- Accordion Item 1 -->
+            <div class="border-b border-gray-200 rounded-lg" data-accordion-item>
+              <button class="w-full flex items-center justify-between px-4 py-3.5 hover:bg-gray-50">
+                <span class="font-normal text-base leading-[120%] tracking-normal text-[#4B4743]">Pizza(10)</span>
+                <div class="flex items-center gap-1">
+                  <a href="javascript:;" class="size-6" onclick="event.stopPropagation()">
+                    <img src="./assest/img/pencil.svg" alt="">
+                  </a>
+                  <a href="javascript:;" class="size-6" onclick="event.stopPropagation()">
+                    <img src="./assest/img/delete.svg" alt="">
+                  </a>
+                  <a href="javascript:;" class="size-6">
+                    <img src="./assest/img/keyboard_arrow_down.svg" alt="">
+                  </a>
+                </div>
+              </button>
+              <div class="hidden px-4 py-3 bg-gray-50">
+                <div class="flex flex-col gap-3">
+                  <div class="flex items-center gap-2 justify-between ml-4">
+                    <div class="font-normal text-base leading-[120%] tracking-normal text-[#4B4743]">
+                      Sub-Categories(10)
+                    </div>
+                    <div class="flex items-center gap-1">
+                      <a href="javascript:;" class="size-6"">
+                        <img src=" ./assest/img/pencil.svg" alt="">
+                      </a>
+                      <a href="javascript:;" class="size-6">
+                        <img src="./assest/img/delete.svg" alt="">
+                      </a>
+                      <a href="javascript:;" class="size-6">
+
+                      </a>
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-2 justify-between ml-4">
+                    <div class="font-normal text-base leading-[120%] tracking-normal text-[#4B4743]">
+                      Sub-Categories(10)
+                    </div>
+                    <div class="flex items-center gap-1">
+                      <a href="javascript:;" class="size-6"">
+                        <img src=" ./assest/img/pencil.svg" alt="">
+                      </a>
+                      <a href="javascript:;" class="size-6">
+                        <img src="./assest/img/delete.svg" alt="">
+                      </a>
+                      <a href="javascript:;" class="size-6">
+
+                      </a>
+                    </div>
+                  </div>
+                  <a href="javascript:;" class="flex text-[#009245] items-center ml-auto w-fit gap-2">
+                    <div class="size-4">
+                      <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512"
+                        class="size-full" xmlns="http://www.w3.org/2000/svg">
+                        <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"
+                          d="M256 112v288m144-144H112"></path>
+                      </svg>
+                    </div>
+                    <div class="text-sm font-semibold">
+                      Add Sub Category
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <script>
+            // Add click handlers for accordion
+            document.querySelectorAll('button').forEach(button => {
+              button.addEventListener('click', () => {
+                const content = button.nextElementSibling;
+                content.classList.toggle('hidden');
+
+                // Rotate arrow icon
+                const svg = button.querySelector('svg');
+                svg.style.transform = content.classList.contains('hidden') ? '' : 'rotate(180deg)';
+              });
+            });
+          </script>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
