@@ -10,111 +10,909 @@
 
 </head>
 
-<body class="p-8">
-  <div class="max-w-7xl mx-auto grid grid-cols-2 gap-4">
+<body class="p-4 md:p-8">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-4">
     <div class="p-2.5 border border-[#AAAAAA]/50 rounded-lg">
-      <div class="flex items-center justify-between">
-        <div class="font-medium text-xl leading-none tracking-normal text-[#4B4743]">
+      <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-0">
+        <div class="font-medium text-lg sm:text-xl leading-none tracking-normal text-[#4B4743]">
           Total Categories (10)
         </div>
-        <div class="">
-          <a class="gap-2.5 rounded-3xl px-4 py-1.5 text-sm lg:text-base flex items-center bg-[#009245] text-white w-fit"
-            href="javascript:;">
-            Open positions
-            <span class="inline-block size-3.5">
-              <img class="size-full" src="./assest/img/add.svg" alt="arrowBlack">
+        <div>
+          <a class="gap-2 rounded-3xl px-3 sm:px-4 py-1.5 text-sm lg:text-base flex items-center bg-[#009245] hover:bg-[#007a35] transition-all duration-300 text-white w-fit"
+            href="javascript:;"
+            id="addCategoryBtn">
+            Add Category
+            <span class="inline-block w-3.5 h-3.5">
+              <img class="w-full h-full" src="./assest/img/add.svg" alt="add">
             </span>
           </a>
         </div>
       </div>
       <div class="mt-4">
-        <div class="">
-          <div class="space-y-2">
-            <!-- Accordion Item 1 -->
-            <div class="border-b border-gray-200 rounded-lg" data-accordion-item>
-              <button class="w-full flex items-center justify-between px-4 py-3.5 hover:bg-gray-50">
-                <span class="font-normal text-base leading-[120%] tracking-normal text-[#4B4743]">Pizza(10)</span>
-                <div class="flex items-center gap-1">
-                  <a href="javascript:;" class="size-6" onclick="event.stopPropagation()">
-                    <img src="./assest/img/pencil.svg" alt="">
-                  </a>
-                  <a href="javascript:;" class="size-6" onclick="event.stopPropagation()">
-                    <img src="./assest/img/delete.svg" alt="">
-                  </a>
-                  <a href="javascript:;" class="size-6">
-                    <img src="./assest/img/keyboard_arrow_down.svg" alt="">
-                  </a>
-                </div>
-              </button>
-              <div class="hidden px-4 py-3 bg-gray-50">
-                <div class="flex flex-col gap-3">
-                  <div class="flex items-center gap-2 justify-between ml-4">
-                    <div class="font-normal text-base leading-[120%] tracking-normal text-[#4B4743]">
-                      Sub-Categories(10)
-                    </div>
-                    <div class="flex items-center gap-1">
-                      <a href="javascript:;" class="size-6"">
-                        <img src=" ./assest/img/pencil.svg" alt="">
-                      </a>
-                      <a href="javascript:;" class="size-6">
-                        <img src="./assest/img/delete.svg" alt="">
-                      </a>
-                      <a href="javascript:;" class="size-6">
-
-                      </a>
-                    </div>
+        <div class="space-y-2">
+          <!-- Accordion Item 1 -->
+          <div class="border-b border-gray-200 rounded-lg">
+            <button class="w-full flex items-center justify-between px-3 sm:px-4 py-3 sm:py-3.5 bg-[#F8F9FA]">
+              <span class="font-normal text-sm sm:text-base leading-[120%] tracking-normal text-[#4B4743]">Pizza(10)</span>
+              <div class="flex items-center gap-1">
+                <a href="javascript:;" id="editCategoryBtn" class="w-6 h-6" onclick="event.stopPropagation()">
+                  <img src="./assest/img/pencil.svg" alt="edit">
+                </a>
+                <a href="javascript:;" class="w-6 h-6" onclick="event.stopPropagation()">
+                  <img src="./assest/img/delete.svg" alt="delete">
+                </a>
+                <a href="javascript:;" class="w-6 h-6">
+                  <img src="./assest/img/keyboard_arrow_down.svg" alt="expand">
+                </a>
+              </div>
+            </button>
+            <div class="hidden px-3 sm:px-4 py-3 bg-gray-50">
+              <div class="flex flex-col gap-3">
+                <div class="flex items-center gap-2 justify-between ml-2 sm:ml-4">
+                  <div class="font-normal text-sm sm:text-base leading-[120%] tracking-normal text-[#4B4743]">
+                    Sub-Categories(10)
                   </div>
-                  <div class="flex items-center gap-2 justify-between ml-4">
-                    <div class="font-normal text-base leading-[120%] tracking-normal text-[#4B4743]">
-                      Sub-Categories(10)
-                    </div>
-                    <div class="flex items-center gap-1">
-                      <a href="javascript:;" class="size-6"">
-                        <img src=" ./assest/img/pencil.svg" alt="">
-                      </a>
-                      <a href="javascript:;" class="size-6">
-                        <img src="./assest/img/delete.svg" alt="">
-                      </a>
-                      <a href="javascript:;" class="size-6">
-
-                      </a>
-                    </div>
+                  <div class="flex items-center gap-1">
+                    <a href="javascript:;" id="editSubCategory" class="w-6 h-6" onclick="event.stopPropagation()">
+                      <img src="./assest/img/pencil.svg" alt="edit">
+                    </a>
+                    <a href="javascript:;" class="w-6 h-6">
+                      <img src="./assest/img/delete.svg" alt="delete">
+                    </a>
                   </div>
-                  <a href="javascript:;" class="flex text-[#009245] items-center ml-auto w-fit gap-2">
-                    <div class="size-4">
-                      <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512"
-                        class="size-full" xmlns="http://www.w3.org/2000/svg">
-                        <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"
-                          d="M256 112v288m144-144H112"></path>
-                      </svg>
-                    </div>
-                    <div class="text-sm font-semibold">
-                      Add Sub Category
-                    </div>
-                  </a>
                 </div>
+                <a href="javascript:;" class="flex text-[#009245] items-center ml-auto w-fit gap-2 hover:opacity-80 transition-all duration-300">
+                  <div class="w-4 h-4">
+                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512"
+                      class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+                      <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"
+                        d="M256 112v288m144-144H112"></path>
+                    </svg>
+                  </div>
+                  <div class="text-sm font-semibold">
+                    Add Sub Category
+                  </div>
+                </a>
               </div>
             </div>
           </div>
-
-          <script>
-            // Add click handlers for accordion
-            document.querySelectorAll('button').forEach(button => {
-              button.addEventListener('click', () => {
-                const content = button.nextElementSibling;
-                content.classList.toggle('hidden');
-
-                // Rotate arrow icon
-                const svg = button.querySelector('svg');
-                svg.style.transform = content.classList.contains('hidden') ? '' : 'rotate(180deg)';
-              });
-            });
-          </script>
+          <div class="border-b border-gray-200 rounded-lg">
+            <button class="w-full flex items-center justify-between px-3 sm:px-4 py-3 sm:py-3.5 bg-[#F8F9FA]">
+              <span class="font-normal text-sm sm:text-base leading-[120%] tracking-normal text-[#4B4743]">Burger(10)</span>
+              <div class="flex items-center gap-1">
+                <a href="javascript:;" class="w-6 h-6" onclick="event.stopPropagation()">
+                  <img src="./assest/img/pencil.svg" alt="edit">
+                </a>
+                <a href="javascript:;" class="w-6 h-6" onclick="event.stopPropagation()">
+                  <img src="./assest/img/delete.svg" alt="delete">
+                </a>
+                <a href="javascript:;" class="w-6 h-6">
+                  <img src="./assest/img/keyboard_arrow_down.svg" alt="expand">
+                </a>
+              </div>
+            </button>
+            <div class="hidden px-3 sm:px-4 py-3 bg-gray-50">
+              <div class="flex flex-col gap-3">
+                <div class="flex items-center gap-2 justify-between ml-2 sm:ml-4">
+                  <div class="font-normal text-sm sm:text-base leading-[120%] tracking-normal text-[#4B4743]">
+                    Sub-Categories(10)
+                  </div>
+                  <div class="flex items-center gap-1">
+                    <a href="javascript:;" class="w-6 h-6">
+                      <img src="./assest/img/pencil.svg" alt="edit">
+                    </a>
+                    <a href="javascript:;" class="w-6 h-6">
+                      <img src="./assest/img/delete.svg" alt="delete">
+                    </a>
+                  </div>
+                </div>
+                <a href="javascript:;" class="flex text-[#009245] items-center ml-auto w-fit gap-2 hover:opacity-80 transition-all duration-300">
+                  <div class="w-4 h-4">
+                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512"
+                      class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+                      <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"
+                        d="M256 112v288m144-144H112"></path>
+                    </svg>
+                  </div>
+                  <div class="text-sm font-semibold">
+                    Add Sub Category
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="border-b border-gray-200 rounded-lg">
+            <button class="w-full flex items-center justify-between px-3 sm:px-4 py-3 sm:py-3.5 bg-[#F8F9FA]">
+              <span class="font-normal text-sm sm:text-base leading-[120%] tracking-normal text-[#4B4743]">Chawmin(10)</span>
+              <div class="flex items-center gap-1">
+                <a href="javascript:;" class="w-6 h-6" onclick="event.stopPropagation()">
+                  <img src="./assest/img/pencil.svg" alt="edit">
+                </a>
+                <a href="javascript:;" class="w-6 h-6" onclick="event.stopPropagation()">
+                  <img src="./assest/img/delete.svg" alt="delete">
+                </a>
+                <a href="javascript:;" class="w-6 h-6">
+                  <img src="./assest/img/keyboard_arrow_down.svg" alt="expand">
+                </a>
+              </div>
+            </button>
+            <div class="hidden px-3 sm:px-4 py-3 bg-gray-50">
+              <div class="flex flex-col gap-3">
+                <div class="flex items-center gap-2 justify-between ml-2 sm:ml-4">
+                  <div class="font-normal text-sm sm:text-base leading-[120%] tracking-normal text-[#4B4743]">
+                    Sub-Categories(10)
+                  </div>
+                  <div class="flex items-center gap-1">
+                    <a href="javascript:;" class="w-6 h-6">
+                      <img src="./assest/img/pencil.svg" alt="edit">
+                    </a>
+                    <a href="javascript:;" class="w-6 h-6">
+                      <img src="./assest/img/delete.svg" alt="delete">
+                    </a>
+                  </div>
+                </div>
+                <a href="javascript:;" class="flex text-[#009245] items-center ml-auto w-fit gap-2 hover:opacity-80 transition-all duration-300">
+                  <div class="w-4 h-4">
+                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512"
+                      class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+                      <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"
+                        d="M256 112v288m144-144H112"></path>
+                    </svg>
+                  </div>
+                  <div class="text-sm font-semibold">
+                    Add Sub Category
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="border-b border-gray-200 rounded-lg">
+            <button class="w-full flex items-center justify-between px-3 sm:px-4 py-3 sm:py-3.5 bg-[#F8F9FA]">
+              <span class="font-normal text-sm sm:text-base leading-[120%] tracking-normal text-[#4B4743]">Sandwich(10)</span>
+              <div class="flex items-center gap-1">
+                <a href="javascript:;" class="w-6 h-6" onclick="event.stopPropagation()">
+                  <img src="./assest/img/pencil.svg" alt="edit">
+                </a>
+                <a href="javascript:;" class="w-6 h-6" onclick="event.stopPropagation()">
+                  <img src="./assest/img/delete.svg" alt="delete">
+                </a>
+                <a href="javascript:;" class="w-6 h-6">
+                  <img src="./assest/img/keyboard_arrow_down.svg" alt="expand">
+                </a>
+              </div>
+            </button>
+            <div class="hidden px-3 sm:px-4 py-3 bg-gray-50">
+              <div class="flex flex-col gap-3">
+                <div class="flex items-center gap-2 justify-between ml-2 sm:ml-4">
+                  <div class="font-normal text-sm sm:text-base leading-[120%] tracking-normal text-[#4B4743]">
+                    Sub-Categories(10)
+                  </div>
+                  <div class="flex items-center gap-1">
+                    <a href="javascript:;" class="w-6 h-6">
+                      <img src="./assest/img/pencil.svg" alt="edit">
+                    </a>
+                    <a href="javascript:;" class="w-6 h-6">
+                      <img src="./assest/img/delete.svg" alt="delete">
+                    </a>
+                  </div>
+                </div>
+                <a href="javascript:;" class="flex text-[#009245] items-center ml-auto w-fit gap-2 hover:opacity-80 transition-all duration-300">
+                  <div class="w-4 h-4">
+                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512"
+                      class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+                      <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"
+                        d="M256 112v288m144-144H112"></path>
+                    </svg>
+                  </div>
+                  <div class="text-sm font-semibold">
+                    Add Sub Category
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="border-b border-gray-200 rounded-lg">
+            <button class="w-full flex items-center justify-between px-3 sm:px-4 py-3 sm:py-3.5 bg-[#F8F9FA]">
+              <span class="font-normal text-sm sm:text-base leading-[120%] tracking-normal text-[#4B4743]">Halwa(10)</span>
+              <div class="flex items-center gap-1">
+                <a href="javascript:;" class="w-6 h-6" onclick="event.stopPropagation()">
+                  <img src="./assest/img/pencil.svg" alt="edit">
+                </a>
+                <a href="javascript:;" class="w-6 h-6" onclick="event.stopPropagation()">
+                  <img src="./assest/img/delete.svg" alt="delete">
+                </a>
+                <a href="javascript:;" class="w-6 h-6">
+                  <img src="./assest/img/keyboard_arrow_down.svg" alt="expand">
+                </a>
+              </div>
+            </button>
+            <div class="hidden px-3 sm:px-4 py-3 bg-gray-50">
+              <div class="flex flex-col gap-3">
+                <div class="flex items-center gap-2 justify-between ml-2 sm:ml-4">
+                  <div class="font-normal text-sm sm:text-base leading-[120%] tracking-normal text-[#4B4743]">
+                    Sub-Categories(10)
+                  </div>
+                  <div class="flex items-center gap-1">
+                    <a href="javascript:;" class="w-6 h-6">
+                      <img src="./assest/img/pencil.svg" alt="edit">
+                    </a>
+                    <a href="javascript:;" class="w-6 h-6">
+                      <img src="./assest/img/delete.svg" alt="delete">
+                    </a>
+                  </div>
+                </div>
+                <a href="javascript:;" class="flex text-[#009245] items-center ml-auto w-fit gap-2 hover:opacity-80 transition-all duration-300">
+                  <div class="w-4 h-4">
+                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512"
+                      class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+                      <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"
+                        d="M256 112v288m144-144H112"></path>
+                    </svg>
+                  </div>
+                  <div class="text-sm font-semibold">
+                    Add Sub Category
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="border-b border-gray-200 rounded-lg">
+            <button class="w-full flex items-center justify-between px-3 sm:px-4 py-3 sm:py-3.5 bg-[#F8F9FA]">
+              <span class="font-normal text-sm sm:text-base leading-[120%] tracking-normal text-[#4B4743]">Sweets(10)</span>
+              <div class="flex items-center gap-1">
+                <a href="javascript:;" class="w-6 h-6" onclick="event.stopPropagation()">
+                  <img src="./assest/img/pencil.svg" alt="edit">
+                </a>
+                <a href="javascript:;" class="w-6 h-6" onclick="event.stopPropagation()">
+                  <img src="./assest/img/delete.svg" alt="delete">
+                </a>
+                <a href="javascript:;" class="w-6 h-6">
+                  <img src="./assest/img/keyboard_arrow_down.svg" alt="expand">
+                </a>
+              </div>
+            </button>
+            <div class="hidden px-3 sm:px-4 py-3 bg-gray-50">
+              <div class="flex flex-col gap-3">
+                <div class="flex items-center gap-2 justify-between ml-2 sm:ml-4">
+                  <div class="font-normal text-sm sm:text-base leading-[120%] tracking-normal text-[#4B4743]">
+                    Sub-Categories(10)
+                  </div>
+                  <div class="flex items-center gap-1">
+                    <a href="javascript:;" class="w-6 h-6">
+                      <img src="./assest/img/pencil.svg" alt="edit">
+                    </a>
+                    <a href="javascript:;" class="w-6 h-6">
+                      <img src="./assest/img/delete.svg" alt="delete">
+                    </a>
+                  </div>
+                </div>
+                <a href="javascript:;" class="flex text-[#009245] items-center ml-auto w-fit gap-2 hover:opacity-80 transition-all duration-300">
+                  <div class="w-4 h-4">
+                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512"
+                      class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+                      <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"
+                        d="M256 112v288m144-144H112"></path>
+                    </svg>
+                  </div>
+                  <div class="text-sm font-semibold">
+                    Add Sub Category
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="border-b border-gray-200 rounded-lg">
+            <button class="w-full flex items-center justify-between px-3 sm:px-4 py-3 sm:py-3.5 bg-[#F8F9FA]">
+              <span class="font-normal text-sm sm:text-base leading-[120%] tracking-normal text-[#4B4743]">Category Name(10)</span>
+              <div class="flex items-center gap-1">
+                <a href="javascript:;" class="w-6 h-6" onclick="event.stopPropagation()">
+                  <img src="./assest/img/pencil.svg" alt="edit">
+                </a>
+                <a href="javascript:;" class="w-6 h-6" onclick="event.stopPropagation()">
+                  <img src="./assest/img/delete.svg" alt="delete">
+                </a>
+                <a href="javascript:;" class="w-6 h-6">
+                  <img src="./assest/img/keyboard_arrow_down.svg" alt="expand">
+                </a>
+              </div>
+            </button>
+            <div class="hidden px-3 sm:px-4 py-3 bg-gray-50">
+              <div class="flex flex-col gap-3">
+                <div class="flex items-center gap-2 justify-between ml-2 sm:ml-4">
+                  <div class="font-normal text-sm sm:text-base leading-[120%] tracking-normal text-[#4B4743]">
+                    Sub-Categories(10)
+                  </div>
+                  <div class="flex items-center gap-1">
+                    <a href="javascript:;" class="w-6 h-6">
+                      <img src="./assest/img/pencil.svg" alt="edit">
+                    </a>
+                    <a href="javascript:;" class="w-6 h-6">
+                      <img src="./assest/img/delete.svg" alt="delete">
+                    </a>
+                  </div>
+                </div>
+                <a href="javascript:;" class="flex text-[#009245] items-center ml-auto w-fit gap-2 hover:opacity-80 transition-all duration-300">
+                  <div class="w-4 h-4">
+                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512"
+                      class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+                      <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"
+                        d="M256 112v288m144-144H112"></path>
+                    </svg>
+                  </div>
+                  <div class="text-sm font-semibold">
+                    Add Sub Category
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="border-b border-gray-200 rounded-lg">
+            <button class="w-full flex items-center justify-between px-3 sm:px-4 py-3 sm:py-3.5 bg-[#F8F9FA]">
+              <span class="font-normal text-sm sm:text-base leading-[120%] tracking-normal text-[#4B4743]">Category Name(10)</span>
+              <div class="flex items-center gap-1">
+                <a href="javascript:;" class="w-6 h-6" onclick="event.stopPropagation()">
+                  <img src="./assest/img/pencil.svg" alt="edit">
+                </a>
+                <a href="javascript:;" class="w-6 h-6" onclick="event.stopPropagation()">
+                  <img src="./assest/img/delete.svg" alt="delete">
+                </a>
+                <a href="javascript:;" class="w-6 h-6">
+                  <img src="./assest/img/keyboard_arrow_down.svg" alt="expand">
+                </a>
+              </div>
+            </button>
+            <div class="hidden px-3 sm:px-4 py-3 bg-gray-50">
+              <div class="flex flex-col gap-3">
+                <div class="flex items-center gap-2 justify-between ml-2 sm:ml-4">
+                  <div class="font-normal text-sm sm:text-base leading-[120%] tracking-normal text-[#4B4743]">
+                    Sub-Categories(10)
+                  </div>
+                  <div class="flex items-center gap-1">
+                    <a href="javascript:;" class="w-6 h-6">
+                      <img src="./assest/img/pencil.svg" alt="edit">
+                    </a>
+                    <a href="javascript:;" class="w-6 h-6">
+                      <img src="./assest/img/delete.svg" alt="delete">
+                    </a>
+                  </div>
+                </div>
+                <a href="javascript:;" class="flex text-[#009245] items-center ml-auto w-fit gap-2 hover:opacity-80 transition-all duration-300">
+                  <div class="w-4 h-4">
+                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512"
+                      class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+                      <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"
+                        d="M256 112v288m144-144H112"></path>
+                    </svg>
+                  </div>
+                  <div class="text-sm font-semibold">
+                    Add Sub Category
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="border-b border-gray-200 rounded-lg">
+            <button class="w-full flex items-center justify-between px-3 sm:px-4 py-3 sm:py-3.5 bg-[#F8F9FA]">
+              <span class="font-normal text-sm sm:text-base leading-[120%] tracking-normal text-[#4B4743]">Category Name(10)</span>
+              <div class="flex items-center gap-1">
+                <a href="javascript:;" class="w-6 h-6" onclick="event.stopPropagation()">
+                  <img src="./assest/img/pencil.svg" alt="edit">
+                </a>
+                <a href="javascript:;" class="w-6 h-6" onclick="event.stopPropagation()">
+                  <img src="./assest/img/delete.svg" alt="delete">
+                </a>
+                <a href="javascript:;" class="w-6 h-6">
+                  <img src="./assest/img/keyboard_arrow_down.svg" alt="expand">
+                </a>
+              </div>
+            </button>
+            <div class="hidden px-3 sm:px-4 py-3 bg-gray-50">
+              <div class="flex flex-col gap-3">
+                <div class="flex items-center gap-2 justify-between ml-2 sm:ml-4">
+                  <div class="font-normal text-sm sm:text-base leading-[120%] tracking-normal text-[#4B4743]">
+                    Sub-Categories(10)
+                  </div>
+                  <div class="flex items-center gap-1">
+                    <a href="javascript:;" class="w-6 h-6">
+                      <img src="./assest/img/pencil.svg" alt="edit">
+                    </a>
+                    <a href="javascript:;" class="w-6 h-6">
+                      <img src="./assest/img/delete.svg" alt="delete">
+                    </a>
+                  </div>
+                </div>
+                <a href="javascript:;" class="flex text-[#009245] items-center ml-auto w-fit gap-2 hover:opacity-80 transition-all duration-300">
+                  <div class="w-4 h-4">
+                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512"
+                      class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+                      <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"
+                        d="M256 112v288m144-144H112"></path>
+                    </svg>
+                  </div>
+                  <div class="text-sm font-semibold">
+                    Add Sub Category
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="p-2.5 border border-[#AAAAAA]/50 rounded-lg">
+      <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-0">
+        <div class="font-medium text-lg sm:text-xl leading-none tracking-normal text-[#4B4743]">
+          Category Name(10) > Sub-Category Name(5)
+        </div>
+        <div>
+          <a class="gap-2 rounded-3xl px-3 sm:px-4 py-1.5 text-sm lg:text-base flex items-center bg-[#009245] hover:bg-[#007a35] transition-all duration-300 text-white w-fit"
+            href="javascript:;">
+            <span class="inline-block w-3.5 h-3.5">
+              <img class="w-full h-full" src="./assest/img/add.svg" alt="add">
+            </span>
+            Add Item
+          </a>
+        </div>
+      </div>
+      <div class="mt-4">
+        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between p-3 sm:px-10 sm:py-2 border-b border-[#AAAAAA]/50 bg-[#F8F9FA]">
+          <div class="flex items-center gap-3 sm:gap-5 w-full sm:w-auto">
+            <div class="w-16 sm:w-auto">
+              <img src="./assest/img/pizza.png" alt="pizza" class="w-full h-auto">
+            </div>
+            <div class="flex-1 sm:flex-initial">
+              <div class="flex items-center gap-2">
+                <div>
+                  <img src="./assest/img/greenDot.svg" alt="status">
+                </div>
+                <div class="font-medium text-sm leading-[120%] tracking-normal text-[#4B4743]">
+                  Cheese pizza
+                </div>
+              </div>
+              <div class="font-normal text-[11px] leading-[120%] tracking-normal text-[#4B4743] mt-[3px]">
+                Toppings, Cheese, Pizza sauce
+              </div>
+              <div class="font-bold text-sm leading-[120%] tracking-normal text-[#F7931E]">
+                ₹12
+              </div>
+            </div>
+          </div>
+          <div class="flex items-center gap-1 mt-2 sm:mt-0">
+            <a href="javascript:;" class="w-6 h-6 hover:opacity-80 transition-all duration-300">
+              <img src="./assest/img/pencil.svg" alt="edit">
+            </a>
+            <a href="javascript:;" class="w-6 h-6 hover:opacity-80 transition-all duration-300">
+              <img src="./assest/img/delete.svg" alt="delete">
+            </a>
+          </div>
+        </div>
+        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between p-3 sm:px-10 sm:py-2 border-b border-[#AAAAAA]/50 bg-[#F8F9FA]">
+          <div class="flex items-center gap-3 sm:gap-5 w-full sm:w-auto">
+            <div class="w-16 sm:w-auto">
+              <img src="./assest/img/pizza.png" alt="pizza" class="w-full h-auto">
+            </div>
+            <div class="flex-1 sm:flex-initial">
+              <div class="flex items-center gap-2">
+                <div>
+                  <img src="./assest/img/greenDot.svg" alt="status">
+                </div>
+                <div class="font-medium text-sm leading-[120%] tracking-normal text-[#4B4743]">
+                  Cheese pizza
+                </div>
+              </div>
+              <div class="font-normal text-[11px] leading-[120%] tracking-normal text-[#4B4743] mt-[3px]">
+                Toppings, Cheese, Pizza sauce
+              </div>
+              <div class="font-bold text-sm leading-[120%] tracking-normal text-[#F7931E]">
+                ₹12
+              </div>
+            </div>
+          </div>
+          <div class="flex items-center gap-1 mt-2 sm:mt-0">
+            <a href="javascript:;" class="w-6 h-6 hover:opacity-80 transition-all duration-300">
+              <img src="./assest/img/pencil.svg" alt="edit">
+            </a>
+            <a href="javascript:;" class="w-6 h-6 hover:opacity-80 transition-all duration-300">
+              <img src="./assest/img/delete.svg" alt="delete">
+            </a>
+          </div>
+        </div>
+        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between p-3 sm:px-10 sm:py-2 border-b border-[#AAAAAA]/50 bg-[#F8F9FA]">
+          <div class="flex items-center gap-3 sm:gap-5 w-full sm:w-auto">
+            <div class="w-16 sm:w-auto">
+              <img src="./assest/img/pizza.png" alt="pizza" class="w-full h-auto">
+            </div>
+            <div class="flex-1 sm:flex-initial">
+              <div class="flex items-center gap-2">
+                <div>
+                  <img src="./assest/img/greenDot.svg" alt="status">
+                </div>
+                <div class="font-medium text-sm leading-[120%] tracking-normal text-[#4B4743]">
+                  Cheese pizza
+                </div>
+              </div>
+              <div class="font-normal text-[11px] leading-[120%] tracking-normal text-[#4B4743] mt-[3px]">
+                Toppings, Cheese, Pizza sauce
+              </div>
+              <div class="font-bold text-sm leading-[120%] tracking-normal text-[#F7931E]">
+                ₹12
+              </div>
+            </div>
+          </div>
+          <div class="flex items-center gap-1 mt-2 sm:mt-0">
+            <a href="javascript:;" class="w-6 h-6 hover:opacity-80 transition-all duration-300">
+              <img src="./assest/img/pencil.svg" alt="edit">
+            </a>
+            <a href="javascript:;" class="w-6 h-6 hover:opacity-80 transition-all duration-300">
+              <img src="./assest/img/delete.svg" alt="delete">
+            </a>
+          </div>
+        </div>
+        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between p-3 sm:px-10 sm:py-2 border-b border-[#AAAAAA]/50 bg-[#F8F9FA]">
+          <div class="flex items-center gap-3 sm:gap-5 w-full sm:w-auto">
+            <div class="w-16 sm:w-auto">
+              <img src="./assest/img/pizza.png" alt="pizza" class="w-full h-auto">
+            </div>
+            <div class="flex-1 sm:flex-initial">
+              <div class="flex items-center gap-2">
+                <div>
+                  <img src="./assest/img/greenDot.svg" alt="status">
+                </div>
+                <div class="font-medium text-sm leading-[120%] tracking-normal text-[#4B4743]">
+                  Cheese pizza
+                </div>
+              </div>
+              <div class="font-normal text-[11px] leading-[120%] tracking-normal text-[#4B4743] mt-[3px]">
+                Toppings, Cheese, Pizza sauce
+              </div>
+              <div class="font-bold text-sm leading-[120%] tracking-normal text-[#F7931E]">
+                ₹12
+              </div>
+            </div>
+          </div>
+          <div class="flex items-center gap-1 mt-2 sm:mt-0">
+            <a href="javascript:;" class="w-6 h-6 hover:opacity-80 transition-all duration-300">
+              <img src="./assest/img/pencil.svg" alt="edit">
+            </a>
+            <a href="javascript:;" class="w-6 h-6 hover:opacity-80 transition-all duration-300">
+              <img src="./assest/img/delete.svg" alt="delete">
+            </a>
+          </div>
+        </div>
+        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between p-3 sm:px-10 sm:py-2 border-b border-[#AAAAAA]/50 bg-[#F8F9FA]">
+          <div class="flex items-center gap-3 sm:gap-5 w-full sm:w-auto">
+            <div class="w-16 sm:w-auto">
+              <img src="./assest/img/pizza.png" alt="pizza" class="w-full h-auto">
+            </div>
+            <div class="flex-1 sm:flex-initial">
+              <div class="flex items-center gap-2">
+                <div>
+                  <img src="./assest/img/greenDot.svg" alt="status">
+                </div>
+                <div class="font-medium text-sm leading-[120%] tracking-normal text-[#4B4743]">
+                  Cheese pizza
+                </div>
+              </div>
+              <div class="font-normal text-[11px] leading-[120%] tracking-normal text-[#4B4743] mt-[3px]">
+                Toppings, Cheese, Pizza sauce
+              </div>
+              <div class="font-bold text-sm leading-[120%] tracking-normal text-[#F7931E]">
+                ₹12
+              </div>
+            </div>
+          </div>
+          <div class="flex items-center gap-1 mt-2 sm:mt-0">
+            <a href="javascript:;" class="w-6 h-6 hover:opacity-80 transition-all duration-300">
+              <img src="./assest/img/pencil.svg" alt="edit">
+            </a>
+            <a href="javascript:;" class="w-6 h-6 hover:opacity-80 transition-all duration-300">
+              <img src="./assest/img/delete.svg" alt="delete">
+            </a>
+          </div>
         </div>
       </div>
     </div>
   </div>
 
+  <!-- All modals should be together -->
+  <div id="categoryModal" class="hidden fixed inset-0 bg-white/80 flex items-center justify-center z-50">
+    <div class="bg-white shadow-lg rounded-2xl w-full max-w-md mx-4 transform transition-all relative">
+        <!-- Modal Header -->
+        <div class="flex items-center justify-between p-4">
+            <h3 class="font-medium text-xl sm:text-2xl md:text-[30px] leading-[38px] tracking-normal text-[#4B4743]">Add Category</h3>
+          </div>
+          
+
+        <!-- Modal Body -->
+        <div class="px-6 py-4">
+            <form id="addCategoryForm" class="space-y-4">
+                <div>
+                    <label for="categoryName" class="block font-normal text-base leading-[24px] tracking-normal mb-2">Category Name</label>
+                    <input type="text" id="categoryName" name="categoryName" 
+                           class="w-full px-4 py-2.5 rounded-lg border border-[#AAAAAA]/50 focus:outline-none focus:border-[#009245] focus:ring-1 focus:ring-[#009245]"
+                           placeholder="Eg. Pizza">
+                </div>
+            </form>
+        </div>
+
+        <!-- Modal Footer -->
+        <div class="flex items-center justify-end gap-3 p-4">
+            <button onclick="closeModal('add')" 
+                    class="px-4 py-2 text-sm font-medium text-[#4B4743] bg-[#8592A3] text-white rounded-lg transition-colors">
+                Close
+            </button>
+            <button onclick="saveCategory('add')" 
+                    class="px-4 py-2 text-sm font-medium text-white bg-[#009245] hover:bg-[#007a35] rounded-lg transition-colors">
+                Next
+            </button>
+        </div>
+        <div class="absolute top-2 -right-10">
+          <button onclick="closeModal('add')" class="text-gray-400 hover:text-gray-500 transition-colors">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+        </button>
+        </div>
+    </div>
+  </div>
+
+  <div id="editCategoryModal" class="hidden fixed inset-0 bg-white/80 flex items-center justify-center z-50">
+    <div class="bg-white shadow-lg rounded-2xl w-full max-w-md mx-4 transform transition-all">
+        <!-- Modal Header -->
+        <div class="flex items-center justify-between p-4">
+            <h3 class="font-medium text-xl sm:text-2xl md:text-[30px] leading-[38px] tracking-normal text-[#4B4743]">Edit Category</h3>
+            
+        </div>
+
+        <!-- Modal Body -->
+        <div class="px-6 py-4">
+            <form id="editCategoryForm" class="space-y-4">
+                <div>
+                    <label for="editCategoryName" class="block font-normal text-base leading-[24px] tracking-normal mb-2">Category Name</label>
+                    <input type="text" id="editCategoryName" name="editCategoryName" 
+                           class="w-full px-4 py-2.5 rounded-lg border border-[#AAAAAA]/50 focus:outline-none focus:border-[#009245] focus:ring-1 focus:ring-[#009245]"
+                           placeholder="Eg. Pizza">
+                </div>
+            </form>
+        </div>
+
+        <!-- Modal Footer -->
+        <div class="flex items-center justify-end gap-3 p-4">
+            <button onclick="saveCategory('edit')" 
+                    class="w-full px-4 py-2 text-sm font-medium text-white bg-[#009245] hover:bg-[#007a35] rounded-lg transition-colors">
+                Done
+            </button>
+        </div>
+
+        <div class="absolute top-2 -right-10">
+          <button onclick="closeModal('edit')" class="text-gray-400 hover:text-gray-500 transition-colors">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+        </button>
+        </div>
+    </div>
+  </div>
+
+  <div id="editSubCategoryModal" class="hidden fixed inset-0 bg-white/80 flex items-center justify-center z-50">
+    <div class="bg-white shadow-lg rounded-2xl w-full max-w-md mx-4 transform transition-all">
+        <!-- Modal Header -->
+        <div class="flex items-center justify-between p-4">
+            <h3 class="font-medium text-xl sm:text-2xl md:text-[30px] leading-[38px] tracking-normal text-[#4B4743]">Edit Sub Category</h3>
+            
+        </div>
+
+        <!-- Modal Body -->
+        <div class="px-6 py-4">
+            <form id="editSubCategoryForm" class="space-y-4">
+                <div>
+                    <label for="subCategoryName" class="block font-normal text-base leading-[24px] tracking-normal mb-2">Sub Category Name</label>
+                    <input type="text" id="subCategoryName" name="subCategoryName" 
+                           class="w-full px-4 py-2.5 rounded-lg border border-[#AAAAAA]/50 focus:outline-none focus:border-[#009245] focus:ring-1 focus:ring-[#009245]"
+                           placeholder="Eg. Veg Pizza">
+                </div>
+            </form>
+        </div>
+
+        <!-- Modal Footer -->
+        <div class="flex items-center justify-end gap-3 p-4">
+            <button onclick="saveCategory('editSub')" 
+                    class="w-full px-4 py-2 text-sm font-medium text-white bg-[#009245] hover:bg-[#007a35] rounded-lg transition-colors">
+                Done
+            </button>
+        </div>
+
+        <div class="absolute top-2 -right-10">
+          <button onclick="closeModal('editSub')" class="text-gray-400 hover:text-gray-500 transition-colors">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+        </button>
+        </div>
+    </div>
+  </div>
+
+  <!-- Then all scripts -->
+  <script>
+    document.querySelectorAll('button').forEach(button => {
+      button.addEventListener('click', () => {
+        const content = button.nextElementSibling;
+        const isOpen = !content.classList.contains('hidden');
+    
+        document.querySelectorAll('[data-accordion-item]').forEach(item => {
+          const btn = item.querySelector('button');
+          const cnt = btn.nextElementSibling;
+          cnt.classList.add('hidden');
+          btn.style.backgroundColor = '#F8F9FA';
+        });
+    
+        if (!isOpen) {
+          content.classList.remove('hidden');
+          button.style.backgroundColor = '#E0FFEF';
+        } else {
+          content.classList.add('hidden');
+          button.style.backgroundColor = '#F8F9FA';
+        }
+    
+        const svg = button.querySelector('svg');
+        if (svg) {
+          svg.style.transform = content.classList.contains('hidden') ? '' : 'rotate(180deg)';
+        }
+      });
+    });
+  </script>
+
+  <script>
+    // Define these functions in the global scope
+    function openModal(type) {
+        let modal;
+        switch(type) {
+            case 'add':
+                modal = document.getElementById('categoryModal');
+                break;
+            case 'edit':
+                modal = document.getElementById('editCategoryModal');
+                break;
+            case 'editSub':
+                modal = document.getElementById('editSubCategoryModal');
+                break;
+        }
+        
+        if (modal) {
+            modal.classList.remove('hidden');
+            modal.querySelector('.transform').classList.add('scale-100');
+            modal.querySelector('.transform').classList.remove('scale-95');
+            document.body.style.overflow = 'hidden';
+        }
+    }
+
+    function closeModal(type) {
+        let modal;
+        switch(type) {
+            case 'add':
+                modal = document.getElementById('categoryModal');
+                break;
+            case 'edit':
+                modal = document.getElementById('editCategoryModal');
+                break;
+            case 'editSub':
+                modal = document.getElementById('editSubCategoryModal');
+                break;
+        }
+        
+        if (modal) {
+            modal.querySelector('.transform').classList.add('scale-95');
+            modal.querySelector('.transform').classList.remove('scale-100');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                document.body.style.overflow = 'auto';
+            }, 200);
+        }
+    }
+
+    function saveCategory(type) {
+        let modal;
+        let inputId;
+        
+        switch(type) {
+            case 'add':
+                modal = document.getElementById('categoryModal');
+                inputId = 'categoryName';
+                break;
+            case 'edit':
+                modal = document.getElementById('editCategoryModal');
+                inputId = 'editCategoryName';
+                break;
+            case 'editSub':
+                modal = document.getElementById('editSubCategoryModal');
+                inputId = 'subCategoryName';
+                break;
+        }
+        
+        if (modal) {
+            const input = modal.querySelector(`#${inputId}`);
+            if (input) {
+                const value = input.value;
+                console.log(`Saving ${type}:`, value);
+            }
+            closeModal(type);
+            modal.querySelector('form').reset();
+        }
+    }
+
+    // Event listener for DOM content loaded
+    document.addEventListener('DOMContentLoaded', function() {
+        // Get modal elements
+        const addModal = document.getElementById('categoryModal');
+        const editModal = document.getElementById('editCategoryModal');
+        const editSubModal = document.getElementById('editSubCategoryModal');
+
+        // Get buttons
+        const addCategoryButton = document.getElementById('addCategoryBtn');
+        const editCategoryButtons = document.querySelectorAll('#editCategoryBtn');
+        const editSubCategoryButtons = document.querySelectorAll('#editSubCategory');
+
+        // Add click event for add category
+        if (addCategoryButton) {
+            addCategoryButton.addEventListener('click', () => openModal('add'));
+        }
+
+        // Add click events for edit category buttons
+        editCategoryButtons.forEach(button => {
+            button.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                openModal('edit');
+            });
+        });
+
+        // Add click events for edit sub-category buttons
+        editSubCategoryButtons.forEach(button => {
+            button.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                openModal('editSub');
+            });
+        });
+
+        // Add event listeners for all modals
+        [addModal, editModal, editSubModal].forEach(modal => {
+            if (modal) {
+                // Close modal when clicking outside
+                modal.addEventListener('click', (e) => {
+                    if (e.target === modal) {
+                        const type = modal === addModal ? 'add' : 
+                                   modal === editModal ? 'edit' : 'editSub';
+                        closeModal(type);
+                    }
+                });
+
+                // Prevent modal close when clicking inside modal
+                const modalContent = modal.querySelector('.bg-white');
+                if (modalContent) {
+                    modalContent.addEventListener('click', (e) => {
+                        e.stopPropagation();
+                    });
+                }
+            }
+        });
+
+        // Close modal on escape key press
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                if (addModal && !addModal.classList.contains('hidden')) {
+                    closeModal('add');
+                }
+                if (editModal && !editModal.classList.contains('hidden')) {
+                    closeModal('edit');
+                }
+                if (editSubModal && !editSubModal.classList.contains('hidden')) {
+                    closeModal('editSub');
+                }
+            }
+        });
+    });
+  </script>
 </body>
 
 </html>
