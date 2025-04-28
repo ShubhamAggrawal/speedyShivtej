@@ -778,8 +778,8 @@
 
         </div>
     </div>
-    <div class="bg-[#090808]">
-        <div class="py-7 max-w-7xl px-4 lg:px-8 w-full mx-auto">
+    <div class="bg-[#090808] overflow-hidden">
+        <div class="py-7 sm:ml-12 md:ml-20 lg:ml-[122px] max-sm:px-4 sm:ps-4 lg:ps-8 w-full mx-auto">
             <div
                 class="max-w-2xl mx-auto font-[Poppins] font-normal text-3xl md:text-5xl leading-[100%] text-center text-[#FFFFFF]">
                 Stories by Speedie!
@@ -1192,7 +1192,7 @@
                         </div>
                     </div>
                 </div>
-                <button id="next" class="font-normal text-base sm:text-xl md:text-2xl leading-none tracking-normal gap-3 flex items-center">
+                <button id="next" class="font-normal text-base sm:text-xl md:text-2xl leading-none tracking-normal gap-3 flex items-center cursor-pointer">
                     Next
                     <img src="./assest/img/textArrow.svg" class="size-6 sm:size-8" alt="Next">
                 </button>
@@ -1258,11 +1258,11 @@
                 slidesPerView: 3,
                 loop: true,
                 loopedSlides: (profiles.length - 1) * 2,  // Reduced by 1 since we're showing one less slide
-                autoplay: {
-                    delay: 3000,
-                    disableOnInteraction: false,
-                    pauseOnMouseEnter: false
-                },
+                // autoplay: {
+                //     delay: 3000,
+                //     disableOnInteraction: false,
+                //     pauseOnMouseEnter: false
+                // },
                 speed: 800,
                 watchSlidesProgress: true,
                 allowTouchMove: true,
@@ -1329,7 +1329,7 @@
                     spaceBetween: 20,
                 },
                 1024: {
-                    slidesPerView: 3.5,
+                    slidesPerView: 3.8,
                     spaceBetween: 34,
                 },
             },
