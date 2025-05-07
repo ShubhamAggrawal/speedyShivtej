@@ -880,9 +880,6 @@
     </div>
   </div>
 
-  <!-- Script -->
-  <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
-
   <!-- Modal Structure -->
   <div id="variations-modal"
     class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50 w-full">
@@ -982,51 +979,45 @@
               <form class="space-y-4">
                 <label for="groupName" class="text-sm text-[#4B4743]">Group Name</label>
                 <input type="text" placeholder="Enter Group Name"
-                  class="w-full border border-[#D0D5DD] rounded-md p-2 text-sm" />
+                  class="w-full border border-[#D0D5DD] rounded-md focus:ring-0 p-2 text-sm" />
 
 
 
                 <div class="border border-[#AAAAAA] p-4 rounded-md space-y-4">
                   <div class="flex items-center justify-between">
                     <span class="text-sm text-[#4B4743]">Customer selection is compulsory</span>
-                    <label class="inline-flex items-center cursor-pointer">
+                    <label class="relative inline-flex items-center cursor-pointer">
                       <input type="checkbox" class="sr-only peer">
-                      <div class="w-9 h-5 bg-gray-200 rounded-full peer peer-checked:bg-[#009245] relative transition">
-                        <div
-                          class="absolute left-1 top-1 bg-white w-3 h-3 rounded-full transition peer-checked:translate-x-4">
-                        </div>
+                      <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-[#009245]">
                       </div>
-                    </label>
+                  </label>
                   </div>
                   <div class="flex gap-2">
                     <div class="w-1/2 flex flex-col gap-2">
                       <label for="minSelection" class="text-sm text-[#4B4743]">Min Selection</label>
                       <input type="number"
-                        class="border border-[#D0D5DD] rounded-md p-2 text-sm" />
+                        class="border border-[#D0D5DD] rounded-md focus:ring-0 p-2 text-sm" />
 
                     </div>
                     <div class="w-1/2 flex flex-col gap-2">
                       <label for="maxSelection" class="text-sm text-[#4B4743]">Max Selection</label>
                       <input type="number"
-                        class="border border-[#D0D5DD] rounded-md p-2 text-sm" />
+                        class="border border-[#D0D5DD] rounded-md focus:ring-0 p-2 text-sm" />
                     </div>
                   </div>
 
                   <div class="flex items-center justify-between">
                     <span class="text-sm text-[#4B4743]">Allow selecting multiple units of same item</span>
-                    <label class="inline-flex items-center cursor-pointer">
+                    <label class="relative inline-flex items-center cursor-pointer">
                       <input type="checkbox" class="sr-only peer">
-                      <div class="w-9 h-5 bg-gray-200 rounded-full peer peer-checked:bg-[#009245] relative transition">
-                        <div
-                          class="absolute left-1 top-1 bg-white w-3 h-3 rounded-full transition peer-checked:translate-x-4">
-                        </div>
+                      <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-[#009245]">
                       </div>
-                    </label>
+                  </label>
                   </div>
                   <div class="flex items-center gap-2 justify-between">
                     <label for="maxQuantity" class="text-sm text-[#4B4743] text-nowrap">Maximum quantity per item</label>
                     <input type="number" placeholder="Maximum quantity per item"
-                      class="w-1/2 border border-[#D0D5DD] rounded-md p-2 text-sm" />
+                      class="w-1/2 border border-[#D0D5DD] rounded-md focus:ring-0 p-2 text-sm" />
                   </div>
 
 
@@ -1039,7 +1030,7 @@
 
 
                 <div class="flex gap-2">
-                  <select class="w-1/2 border border-[#D0D5DD] rounded-md p-2 text-sm">
+                  <select class="w-1/2 border border-[#D0D5DD] rounded-md focus:ring-0 p-2 text-sm">
                     <option>Select existing item from menu</option>
                     <!-- Add options dynamically -->
                   </select>
@@ -1048,7 +1039,7 @@
                 </div>
                 <div class="flex gap-2 items-end max-sm:flex-wrap">
                   <label
-                    class="flex flex-col items-center justify-center border-2 border-dashed border-[#AAAAAa] rounded-lg bg-green-50 text-[#009245] py-2 text-xs cursor-pointer hover:bg-[#E0FFEF] transition relative w-20 h-full">
+                    class="flex flex-col items-center justify-center border-2 border border-[#AAAAAa] rounded-lg bg-green-50 text-[#009245] py-2 text-xs cursor-pointer hover:bg-[#E0FFEF] transition relative w-20 h-full">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mb-1" fill="none" viewBox="0 0 24 24"
                       stroke="currentColor">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
@@ -1059,22 +1050,28 @@
                   <div class="flex flex-col gap-2 w-1/2">
                     <label for="addOnName" class="text-sm text-[#4B4743]">Add on name</label>
                     <input type="text" placeholder="Add on name"
-                      class="border border-[#D0D5DD] rounded-md p-2 text-sm" />
+                      class="border border-[#D0D5DD] rounded-md focus:ring-0 p-2 text-sm" />
                   </div>
 
                   <div class="w-[60px] shrink-0">
-                    <select class="border border-[#D0D5DD] rounded-md p-2 text-sm w-full">
-                      <option class="">
-                        <!-- <span class="size-3 rounded-full bg-[#009245] text-white"></span> -->
-                         <img class="size-full" src="./assest/img/greenDot.svg" alt="">
+                    <select class="border border-[#D0D5DD] rounded-md focus:ring-0 p-2 text-sm w-full appearance-none bg-[url('./assest/img/greenDot.svg')] bg-no-repeat bg-[center_right_2rem] bg-[length:1rem]">
+                      <option value="veg" class="flex items-center gap-2">
+                        <span class="size-3 rounded-full bg-[#009245]"></span>
                       </option>
-                      <!-- Add options dynamically -->
+                      <option value="non-veg" class="flex items-center gap-2">
+                        <span class="size-3 rounded-full bg-[#E70000]"></span>
+                        Non-Veg
+                      </option>
+                      <option value="egg" class="flex items-center gap-2">
+                        <span class="size-3 rounded-full bg-[#F7931E]"></span>
+                        Egg
+                      </option>
                     </select>
                   </div>
 
 
                   <input type="number" placeholder="Price"
-                    class="w-1/2 border border-[#D0D5DD] rounded-md p-2 text-sm" />
+                    class="w-1/2 border border-[#D0D5DD] rounded-md focus:ring-0 p-2 text-sm" />
                   <button type="button" class="text-red-500 text-xl">
                     <img src="./assest/img/delete.svg" alt="delete" class="size-8">
                   </button>
@@ -1149,6 +1146,8 @@
     </div>
   </div>
 
+  <!-- Script -->
+  <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
   <script>
     let isExpanded = false;
     function toggleSidebar() {
@@ -1213,7 +1212,6 @@
       document.getElementById('mobile-preview-modal').classList.add('hidden');
     };
   </script>
-
 </body>
 
 </html>
